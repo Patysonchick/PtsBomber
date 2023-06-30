@@ -7,7 +7,6 @@
 
 int main(void)
 {
-    system("mode con cols=80 lines=25");
     cout << "PtsBomber " << CURRENT_VERSION << " by Patysoncick\n" << endl;
 
     cout << "Выбери действие(для справки введи 'h')" << endl;
