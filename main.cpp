@@ -27,8 +27,16 @@ int main(void)
                 cout << "Телефон введён неправильно" << endl;
                 goto phoneEntering;
             }
-            attackMode();
 
+            int cyclesCount;
+            cin >> cyclesCount;
+
+            for(int i=0; i<cyclesCount; i++)
+            {
+                cout << endl;
+                attackMode();
+            }
+            
             goto actionChoice;
             break;
 
