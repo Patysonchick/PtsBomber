@@ -1,2 +1,3 @@
 # PtsBomber
-First SMS bomber on C++
+Первый СМС бомбер на C++.
+Основан на cUrl, сервисы взяты из https://github.com/dmitrijkotov634/android-bomber.git
