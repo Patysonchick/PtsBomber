@@ -28,12 +28,14 @@ int main(void)
                 goto phoneEntering;
             }
 
+            cout << "Введи количество кругов: ";
             int cyclesCount;
             cin >> cyclesCount;
 
             for(int i=0; i<cyclesCount; i++)
             {
                 cout << endl;
+                cout << "Текущий круг: " << i+1 << endl;
                 attackMode();
             }
             
