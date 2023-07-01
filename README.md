@@ -6,14 +6,15 @@ ___
 ![menu](https://i.imgur.com/bm861Z7.png)
 
 ___
-# ⬇️Нужна помощь? Пиши vyt!⬇️
+# ⬇️Нужна помощь? Пиши мне!⬇️
 ## [`Телеграм`](https://t.me/SenkeiSenbonzakuraKageyoshi)
+[![telega](https://i.imgur.com/YCXRYeC.png)](https://t.me/SenkeiSenbonzakuraKageyoshi)
 ___
 
-___
+
 # ⬇️Видео по установке и использовании⬇️
 ## [`YouTube Video`](https://www.youtube.com/watch?v=DEk-ck_ZCFk)
-___
+[![youtube](https://i.imgur.com/Au3AjfY.png)](https://www.youtube.com/watch?v=DEk-ck_ZCFk)
 
 ___
 # 🌐Установка
@@ -33,7 +34,7 @@ ___
   + `cd PtsBomber`
   + `sh build.sh`
 
-  + ### Fedora Linux:
++ #### Fedora Linux:
   + `sudo dnf update && sudo dnf upgrade`
   + `sudo dnf install git`
   + `git clone https://github.com/Patysonchick/PtsBomber`
@@ -46,3 +47,4 @@ ___
   + `git clone https://github.com/Patysonchick/PtsBomber`
   + `cd PtsBomber`
   + `sh build.sh`
+___
