@@ -4,5 +4,4 @@ echo "Компиляция..."
 g++ main.cpp -o PtsBomber -lcurl 
 
 echo "Запуск: "
-chmod +x PtsBomber
 ./PtsBomber
