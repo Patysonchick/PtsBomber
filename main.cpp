@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    cout << "PtsBomber " << CURRENT_VERSION << " by Patysoncick\n" << endl;
+    cout << "PtsBomber " << CURRENT_VERSION << " by Patysonchick\n" << endl;
 
     cout << "Выбери действие(для справки введи 'h')" << endl;
     actionChoice:
