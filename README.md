@@ -1,9 +1,9 @@
-# **Внимание!**
-> ## Данный проет был созданн исключительно в ознокомительных целях, мы не несём ответственности за ваши действия.
+# Внимание!
+> ## Данный проет был создан исключительно в ознокомительных целях, мы не несём ответственности за ваши действия.
 ___
 # Меню
 ```
-PtsBomber 1 by Patysonchick
+PtsBomber v1.0 by Patysonchick
 
 Выбери действие(для справки введи 'h')
 >>> 
@@ -13,28 +13,29 @@ ___
 # Премущества PtsBomber
 1. Он написанн на языке C++, поэтому он быстрее своих аналогов на Java и Python.
 2. Используется популярная и провереннная временем бибилиотека cUrl
-3. Код разделённ на файлы и папки, поэтому будет легче модифицировать код, например список сервисов располагается по адресу ```files/services.h```.
+3. Код разделён на файлы и папки, поэтому будет легче модифицировать код, например список сервисов располагается по адресу ```src/services.h```.
+4. Сервисы проверяются перед добавление в проект.
 ___
 # Нужна помощь? Пиши мне!
-## [**Telegram канал**](https://t.me/PtsBomber)
-## [**Мой Telegram**](https://t.me/SenkeiSenbonzakuraKageyoshi)
+## [Telegram канал](https://t.me/PtsBomber)
+## [Мой Telegram](https://t.me/SenkeiSenbonzakuraKageyoshi)
 ___
 # Требования к установке
 ###### *Протестированно на Pop! OS Lenovo Thinkpad T480.*
 ## Пакеты:
 - g++(gpp) *- компилятор*
-- curl(libcurl4-openssl-dev) *- библиотека для работы с сетью*
+- libcurl4-openssl-dev(curl) *- библиотека для работы с сетью*
 - sh(bash) *- выполнение скрипта запуска и компиляции*
+###### *Например в Pop! Os/Mint/Ubuntu/Debian:*
+###### ```sudo apt install libcurl4-openssl-dev```
 ___
 # Краткий гайд
-- git clone https://github.com/Patysonchick/PtsBomber
-- cd PtsBomber
-- sh build.sh
+- ```git clone https://github.com/Patysonchick/PtsBomber```
+- ```cd PtsBomber```
+- ```sh build/build.sh```
 ## При следующем запуске:
-- cd PtsBomber
-- ./PtsBomber
-## Подробное объяснение в видео
+- ```cd PtsBomber```
+- ```./PtsBomber```
 ___
-# Видео по установке и использовании
-## [`YouTube Video`](https://www.youtube.com/watch?v=DEk-ck_ZCFk)
-[![youtube](https://i.imgur.com/Au3AjfY.png)](https://www.youtube.com/watch?v=DEk-ck_ZCFk)  
+# Рекомендации
+## Некоторые сервисы отслеживают с каких IP адресов был произведён запрос и сколько раз, поэтому настоятельно рекомендуем использовать VPN или Proxy(пока не добавлено) для того чтобы скрыть свой IP адрес.
